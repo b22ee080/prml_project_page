@@ -99,14 +99,31 @@
       font-size: 30px; /* Adjust the icon size */
       color: #0077B5; /* LinkedIn brand color */
     }
+            dialog {
+      width: 300px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Style for the dialog close button */
+    dialog button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
     </style>
 </head>
 <body onload="showWelcomeMessage()">
-    <script>
-    function showWelcomeMessage() {
-    alert("Welcome to the webpage!");
-    }
-    </script>
+    <dialog id="welcomeDialog">
+    <p>Welcome to the webpage!</p>
+    <button onclick="closeDialog()">Close</button>
+    </dialog>
     <header>
         <h1 style="font-size: 4em;">Sentiment Classification Using ML algorithms</h1>
         <p>
